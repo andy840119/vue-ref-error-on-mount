@@ -1,6 +1,7 @@
 <template>
     <test-component ref="testComponent">
         <a>:P</a>
+        <button v-on:click="onButtonClicked">Button</button>
     </test-component>
 </template>
 
@@ -14,6 +15,14 @@ module.exports = {
 
         console.log(this.$refs);
         console.log(this.$refs.testComponent);
+    },
+    methods: {
+        onButtonClicked(){
+
+            //it only works on button click event
+            console.log(this.$refs);
+            console.log(this.$refs.testComponent);
+        }
     }
 }
 </script>
