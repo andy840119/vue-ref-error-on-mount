@@ -7,3 +7,7 @@
 在 `mounted` 執行階段時會出現錯誤
 
 但在其他事件像是 `onButtonClicked`時不會出錯
+
+https://chrome.google.com/webstore/detail/web-server-for-chrome/ofhbbkphhbklhfoeikjpcbhemlocgigb
+
+需要用web server with chrome 開啟
