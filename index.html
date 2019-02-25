@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, user-scalable=no">
+		<title>測試</title>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css">
+		<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+		<!--[if lt IE 9]>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+	</head>
+	<body class="bg-light">	
+
+		<!--Include vue.js library-->
+		<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/moment@2.20.1/moment.min.js"></script>
+		<script src="https://unpkg.com/vee-validate@2.0.0-rc.25/dist/vee-validate.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
+		<script src="https://unpkg.com/http-vue-loader"></script>
+		<script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+		<script src="https://unpkg.com/vuetify@1.0.17/dist/vuetify.min.js"></script>
+		<script src="https://cdn.bootcss.com/vue-resource/1.0.3/vue-resource.js"></script>
+
+		<!--loading all scrips-->
+		<script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+		<script src="https://use.fontawesome.com/releases/v5.6.0/js/all.js"></script>
+		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+		<!--app area-->
+		<div id="app" class="container my-3" v-cloak>
+			<v-app>
+				<router-view></router-view>
+			</v-app>
+		</div>
+
+		<!--vue route-->
+		<script>
+			Vue.use(VueRouter);
+			Vue.use(VeeValidate);
+		
+			//define routes
+			const routes = [{
+					path: '/',
+					component: httpVueLoader('pages/index.vue')
+				}];
+
+			const router = new VueRouter({
+				routes // short for `routes: routes`
+			});
+		
+			var app = new Vue({
+				el: '#app',
+				watch: {},
+				data: {
+					msg: 'Hello'
+				},
+				methods: {},
+				router
+			});
+		</script>
+	</body>
+</html>
