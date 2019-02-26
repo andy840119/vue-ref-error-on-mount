@@ -11,3 +11,7 @@
 https://chrome.google.com/webstore/detail/web-server-for-chrome/ofhbbkphhbklhfoeikjpcbhemlocgigb
 
 需要用web server with chrome 開啟
+
+.
+
+確認是vue-html-loader的鍋
